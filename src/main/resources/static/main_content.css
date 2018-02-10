@@ -1,0 +1,102 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    background-image: url("okean.jpg");
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 19%;
+    background-color: #efefef;
+    position: fixed;
+    height: 94%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #080100;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #dd1f00;
+    color: white;
+}
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    height: 150px;
+    background: #FFE680;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+    width: 100%;
+    position: relative;
+
+}
+.middle:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+.content {
+    padding: 10px 10px 10px 20%;
+}
+
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+    margin: 10px;
+    left: 10px;
+    float: left;
+    width: 15%;
+    margin-left: -100%;
+    position: relative;
+    background: #7BB4C7;
+}
+.for_list{
+    left: 3%;
+    align-content: center;
+    margin: 10px;
+}
+
+#choose_lec{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: "Calibri Light";
+    font-size: 48pt;
+    top: 47%;
+    left: 50%;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    height: 100px;
+    background: #BFF08E;
+}
+
+/********************************************/
+

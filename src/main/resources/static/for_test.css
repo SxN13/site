@@ -1,0 +1,92 @@
+body{
+    margin: 0px;
+    background-image: url("okean.jpg");
+}
+p {
+    position: relative;
+    align-content: left;
+    text-align: left;
+    font-family: "Calibri Light";
+    font-size: 18pt;
+    width: 100%;
+    margin-left: 3%;
+}
+input {
+    text-align: left;
+    align-content: left;
+    font-family: "Calibri Light";
+    font-size: 18pt;
+    margin-left: 7%;
+
+}
+#pre_centr{
+
+    margin: 0px;
+    padding: 0px;
+    align-content: left;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-attachment: scroll;
+
+}
+#centr{
+    background-color: rgba(255, 254, 246, 0.45);
+    position: relative;
+    align-content: center;
+}
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.for_list{
+    margin: 10px;
+    padding: 10px;
+
+}
+li .lec {
+    display: block;
+    color: #080100;
+    padding: 8px 16px;
+    font-size: 27px;
+    text-decoration: none;
+    text-align: center;
+}
+
+li .lec.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+li .lec:hover:not(.active) {
+    background-color: #dd1f00;
+    color: white;
+}
+a.resu {
+    display: block;
+    color: #080100;
+    padding: 8px 16px;
+    font-size: 27px;
+    text-decoration: none;
+    user-select: none;
+    text-align: center;
+}
+a.resu:hover {
+    background-color: rgba(221, 31, 0, 0.53);
+    color: white;
+    user-select: none;
+} /* при наведении курсора мышки */
+a.resu:active {
+    background: rgb(152,15,0);
+    user-select: none;
+} /* при нажатии */
+#rezultat{
+    position: absolute;
+    text-align: center;
+    font-family: "Calibri Light";
+    font-size: 25pt;
+    width: 100%;
+    background-color: rgba(255, 254, 246, 0.45);
+}

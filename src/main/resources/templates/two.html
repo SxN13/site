@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Lection page</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link th:href="@{/main_content.css}" href="../static/main_content.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div class="wrapper">
+
+    <!--<header class="header">-->
+        <!---->
+    <!--</header>&lt;!&ndash; .header&ndash;&gt;-->
+
+    <div class="middle">
+        <div class="container">
+            <main class="content">
+                <!--Тест ПДФ-->
+                <div id="choose_lec">
+                    Веберите лекцию
+                </div>
+                <iframe id="frame" th:src="@{/}" width="100%" height="900" style="visibility: hidden"></iframe>
+            </main><!-- .content -->
+        </div><!-- .container-->
+        <aside class="left-sidebar">
+            <ul class="main-menu">
+                <li><a href="/">Home Page</a>
+
+                <ul id="qe" class="sub-menu">
+                       <a id="0"  data="History_IBM.mp4">1. Поколения ЭВМ (Видео-лекция)</a>
+                       <a id="01" data="History_IBM_lec.pdf">2. Поколения ЭВМ (Конспект)</a>
+                       <a id="02" href="test_history.html" style="text-align: center">  2.2 Поколения ЭВМ (Тест)</a>
+                       <a id="1"  data="system_of_memory.pdf">3. Система памяти ЭВМ</a>
+                       <a id="2"  data="cache_memory.pdf">4. КЭШ память</a>
+                       <a id="3"  data="multytasking.pdf">5. Мультизадачность</a>
+                       <a id="4"  data="exeption.pdf">6. Прерывания</a>
+                       <a id="5"  data="control_device.pdf">7. Устройство управления</a>
+                       <a id="6"  data="local_control_device.pdf">8. Местное устройство управления</a>
+                       <a id="7"  href="other_source.html">Другие источники</a>
+                </ul>
+                </li>
+            </ul>
+        </aside><!-- .left-sidebar -->
+
+    </div><!-- .middle-->
+</div><!-- .wrapper -->
+<script>
+    var contein = document.getElementById('qe');
+    var testatr=NaN;
+    contein.onclick=function (e) {
+        if(e.target.tagName === 'A'){
+            atr = e.target.getAttribute('data');
+            testatr = atr;
+            var qw = document.getElementById('frame');
+            var lec = document.getElementById('choose_lec');
+            qw.setAttribute('src',"/"+atr);
+            lec.style.visibility='hidden';
+            qw.style.visibility='visible';
+
+        }
+    }
+</script>
+</body>
+
+</html>

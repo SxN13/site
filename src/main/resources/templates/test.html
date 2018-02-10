@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>test</title>
+</head>
+<body>
+<div id="centr">
+    <form id="form" action="/test" method="post">
+    <p>Выполните задания теста:</p>
+    <p>1. Три человека, которые заложили основы информационной теории в 17 веке? </p>
+    <input type="text" id="z_1" name="q1"/>
+    <p>2. Кто изобрёл триггер? </p>
+    <input type="text" id="z_2" name="q2"/>
+    <p>3. Кто сформулировал основные из традиционных принципов построения ЭВМ?  </p>
+    <input type="text" id="z_3" name="q3"/>
+        <div><button type="submit">check</button></div>
+    </form>
+</div>
+
+
+<div th:text="${lel}"></div>
+
+</body>
+</html>

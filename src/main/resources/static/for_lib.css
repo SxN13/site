@@ -1,0 +1,35 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    background-image: url("okean.jpg");
+}
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.for_list{
+    margin: 10px;
+    padding: 10px;
+
+}
+li .lec {
+    display: block;
+    color: #080100;
+    padding: 8px 16px;
+    font-size: 27px;
+    text-decoration: none;
+}
+
+li .lec.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+li .lec:hover:not(.active) {
+    background-color: #dd1f00;
+    color: white;
+}
