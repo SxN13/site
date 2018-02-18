@@ -14,6 +14,8 @@ p {
 input {
     text-align: left;
     align-content: left;
+    border-radius: 10px;
+    border: 1px solid #d6020a;
     font-family: "Calibri Light";
     font-size: 18pt;
     margin-left: 7%;
@@ -89,4 +91,39 @@ a.resu:active {
     font-size: 25pt;
     width: 100%;
     background-color: rgba(255, 254, 246, 0.45);
+}
+input[type=text]:focus {
+    border: 1px solid #d6020a;
+    border-radius: 10px;
+    background-color: lightcoral;
+    color: white;
+    transition-duration: 0.4s;
+
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #d6020a;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#check{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 27px;
+    border: 1px solid #d6020a;
+    border-radius: 3px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    transition-duration: 0.4s;
+}
+#check:hover{
+    background-color: #d6020a;
+    color: white;
+
 }

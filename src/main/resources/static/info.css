@@ -21,6 +21,7 @@
     font-family: "Calibri Light";
     font-size: 27pt;
     color: black;
+    transition-duration: 0.4s;
 }
 .lin:hover{
     text-decoration: none;
@@ -56,6 +57,7 @@ li .lec {
     padding: 8px 16px;
     font-size: 27px;
     text-decoration: none;
+    transition-duration: 0.4s;
 }
 
 li .lec.active {

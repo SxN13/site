@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>History of IBM</title>
@@ -14,73 +14,36 @@
     </div>
     <div id="centr">
         <p>Выполните задания теста:</p>
-        <p>1. Три человека, которые заложили основы информационной теории в 17 веке? </p>
-        <input type="text" id="z_1"/>
-        <p>2. Кто изобрёл триггер? </p>
-        <input type="text" id="z_2"/>
-        <p>3. Кто сформулировал основные из традиционных принципов построения ЭВМ?  </p>
-        <input type="text" id="z_3"/>
-        <p>4. Немецкий математик и философ который представил в Парижской академии вычислитель,
+        <form id="form" action="/test" method="post">
+            <p>1. Три человека, которые заложили основы информационной теории в 17 веке? </p>
+            <input type="text" id="z_1" name="q1"/>
+            <p>2. Кто изобрёл триггер? </p>
+            <input type="text" id="z_2" name="q2"/>
+            <p>3. Кто сформулировал основные из традиционных принципов построения ЭВМ?  </p>
+            <input type="text" id="z_3" name="q3"/>
+            <p>4. Немецкий математик и философ который представил в Парижской академии вычислитель,
             выполняющий все 4 арифметических действия.
-        </p>
-        <input type="text" id="z_4"/>
-        <p>5. В каком году Стефен Возняк и Стивен Джобс собирают первый настольный компьютер "Apple"  </p>
-        <input type="text" id="z_5"/>
-        <p>6. Первая программистка которая готовила программы для вычислителя аналитической машины.  </p>
-        <input type="text" id="z_6"/>
-        <p>7. В каком году Морис Уилкс построил компьютер EDSAC в соответствии с принципами фон Неймана?  </p>
-        <input type="text" id="z_7"/>
-        <a class="resu" onClick="proverit();">Проверить</a>
-        <div id="rezultat">*</div>
+            </p>
+            <input type="text" id="z_4" name="q4"/>
+            <p>5. В каком году Стефен Возняк и Стивен Джобс собирают первый настольный компьютер "Apple"  </p>
+            <input type="text" id="z_5" name="q5"/>
+            <p>6. Первая программистка которая готовила программы для вычислителя аналитической машины.  </p>
+            <input type="text" id="z_6" name="q6"/>
+            <p>7. В каком году Морис Уилкс построил компьютер EDSAC в соответствии с принципами фон Неймана?  </p>
+            <input type="text" id="z_7" name="q7"/>
+            <div><button id = "check" type="submit" onclick="f()">Проверить</button></div>
+            <div id="rezultat" th:text="${rez}"></div>
+        </form>
     </div>
 </div>
-
 <script>
-    function proverit(){
-        var otv_uch_1 = document.getElementById('z_1').value;
-        var otv_uch_2 = document.getElementById('z_2').value;
-        var otv_uch_3 = document.getElementById('z_3').value;
-        var otv_uch_4 = document.getElementById('z_4').value;
-        var otv_uch_5 = document.getElementById('z_5').value;
-        var otv_uch_6 = document.getElementById('z_6').value;
-        var otv_uch_7 = document.getElementById('z_7').value;
-        var labels = ["неправильно","неправильно","неправильно","неправильно","неправильно","неправильно","неправильно"]
-        ball = 0;
-        if(otv_uch_1.toLowerCase() == "шиккард паскаль лейбниц" ||
-            otv_uch_1.toLowerCase() == "шиккард лейбниц паскаль" ||
-            otv_uch_1.toLowerCase() == "лейбниц шиккард паскаль" ||
-            otv_uch_1.toLowerCase() == "лейбниц паскаль шиккард" ||
-            otv_uch_1.toLowerCase() == "паскаль лейбниц шиккард" ||
-            otv_uch_1.toLowerCase() == "паскаль шиккард лейбниц"){
-            ball +=1;
-            labels[0] = "Правильно";
-        }
-        if(otv_uch_2.toLowerCase() == "м.а. бонч-бруевич" || otv_uch_2.toLowerCase() =="бонч-бруевич"){
-            ball +=1; labels[1] = "Правильно";
-        }
-        if(otv_uch_3.toLowerCase() == "фон нейман" || otv_uch_3.toLowerCase() =="нейман"){
-            ball +=1; labels[2] = "Правильно";
-        }
-        if(otv_uch_4.toLowerCase() == "г. лейбниц" || otv_uch_4.toLowerCase() == "лейбниц"){
-            ball +=1; labels[3] = "Правильно";
-        }
-        if(otv_uch_5 == 1977 ){
-            ball +=1; labels[4] = "Правильно";
-        }
-        if(otv_uch_6.toLowerCase() == "ада лавлейс (байрон)" ||
-            otv_uch_6.toLowerCase() == "ада байрон" ||
-            otv_uch_6.toLowerCase() == "ада"){
-            ball +=1; labels[5] = "Правильно";
-        }
-        if(otv_uch_7 == 1949 || otv_uch_7.toLowerCase() == "путин помоги"){
-            ball +=1; labels[6] = "Правильно";
-            if (otv_uch_7.toLowerCase() == "путин помоги"){}
-        }
-        vsego_zadach = 7;
-        procent_vip = ball/vsego_zadach * 100;
-        document.getElementById('rezultat').innerHTML = "Правильно "+ ball + " из " + vsego_zadach ;
+    function f() {
+        var b = document.getElementById("check");
+        var rez = document.getElementById("rezultat");
+
+        rez.style.top = "45%"
+
     }
 </script>
-
 </body>
 </html>

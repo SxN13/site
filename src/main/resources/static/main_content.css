@@ -15,6 +15,7 @@ ul {
     position: fixed;
     height: 94%;
     overflow: auto;
+    transition-duration: 0.4s;
 }
 
 li a {
@@ -22,6 +23,7 @@ li a {
     color: #080100;
     padding: 8px 16px;
     text-decoration: none;
+    transition-duration: 0.4s;
 }
 
 li a.active {
