@@ -12,8 +12,17 @@
             <li><a class="lec" href="two.html">Назад</a></li>
         </ul>
     </div>
+    <form id="form_dat" action="/test" method="post">
+        <p>Фамилия:</p>
+        <input type="text" id="l_n" name="l_n"/>
+        <p>Имя:</p>
+        <input type="text" id="f_n" name="f_n"/>
+        <p>Группа:</p>
+        <input type="text" id="group" name="gr"/>
+</form>
     <div id="centr">
         <p>Выполните задания теста:</p>
+
         <form id="form" action="/test" method="post">
             <p>1. Три человека, которые заложили основы информационной теории в 17 веке? </p>
             <input type="text" id="z_1" name="q1"/>
@@ -38,11 +47,6 @@
 </div>
 <script>
     function f() {
-        var b = document.getElementById("check");
-        var rez = document.getElementById("rezultat");
-
-        rez.style.top = "45%"
-
     }
 </script>
 </body>

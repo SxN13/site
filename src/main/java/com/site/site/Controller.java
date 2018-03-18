@@ -38,7 +38,16 @@ public class Controller {
     public ModelAndView test_history_view(Model model) {
         return new ModelAndView("test_history",(Map)model);
     }
-
+//    @RequestMapping(value = "/fl_name",method = {RequestMethod.POST,RequestMethod.GET})
+//    public ModelAndView student_check(@RequestParam(value = "ln", required = false) String ln,
+//                                      @RequestParam(value = "fn", required = false) String fn,
+//                                      @RequestParam(value = "gr", required = false) String gr,
+//                                      Model model){
+//        System.out.println(ln);
+//        System.out.println(fn);
+//        System.out.println(gr);
+//        return new ModelAndView("test_history",(Map)model);
+//    }
     @RequestMapping(value = "/test",method = {RequestMethod.POST,RequestMethod.GET})
     public ModelAndView test_history(@RequestParam(value = "q1", required = false) String q1,
                                      @RequestParam(value = "q1", required = false) String q2,
@@ -47,9 +56,13 @@ public class Controller {
                                      @RequestParam(value = "q5", required = false) String q5,
                                      @RequestParam(value = "q6", required = false) String q6,
                                      @RequestParam(value = "q7", required = false) String q7,
+                                     @RequestParam(value = "l_n", required = false) String ln,
+                                     @RequestParam(value = "f_n", required = false) String fn,
+                                     @RequestParam(value = "gr", required = false) String gr,
                                      Model model) {
         int true_count = 0;
-        
+        String resu = ln + " " + fn + " " + gr;
+        System.out.println(resu);
         if(q1.toLowerCase().equals("шиккард паскаль лейбниц") ||
                 q1.toLowerCase().equals("шиккард лейбниц паскаль") ||
                 q1.toLowerCase().equals("лейбниц шиккард паскаль") ||
